@@ -1,0 +1,26 @@
+{
+  "invocation": "my test app",
+  "intents": [
+    {
+      "name": "HelloWorldIntent",
+      "phrases": ["hello", "hello world", "ciao"]
+    },
+    {
+      "name": "speaker",
+      "phrases": ["speaker", "chi è lo speaker", "lo speaker"]
+    },
+    {
+      "name": "MyNameIsIntent",
+      "phrases": ["{name}", "my name is {name}", "i am {name}", "you can call me {name}"],
+      "inputs": [
+        {
+          "name": "name",
+          "type": {
+            "alexa": "AMAZON.US_FIRST_NAME",
+            "dialogflow": "@sys.given-name"
+          }
+        }
+      ]
+    }
+  ]
+}
